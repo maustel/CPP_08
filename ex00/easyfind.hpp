@@ -6,16 +6,16 @@
 /*   By: maustel <maustel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 12:13:13 by maustel           #+#    #+#             */
-/*   Updated: 2025/04/23 15:01:36 by maustel          ###   ########.fr       */
+/*   Updated: 2025/04/23 15:18:18 by maustel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef __EASYFIND_HPP__
 # define __EASYFIND_HPP__
 
-#include <algorithm>
-#include <iterator>
-#include <stdexcept>
+#include <algorithm>  // For std::find
+#include <iterator>   // For iterator utilities
+#include <stdexcept>  // For exception handling
 #include <vector>
 #include <list>
 #include <array>
