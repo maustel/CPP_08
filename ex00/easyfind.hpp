@@ -6,7 +6,7 @@
 /*   By: maustel <maustel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 12:13:13 by maustel           #+#    #+#             */
-/*   Updated: 2025/04/23 15:18:18 by maustel          ###   ########.fr       */
+/*   Updated: 2025/07/23 11:03:39 by maustel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@
 #include <list>
 #include <array>
 #include <iostream>
+
+#include "colors.h"
 
 /*
 std::find(first, last, value)
@@ -38,7 +40,7 @@ typename T::iterator easyfind(T& container, int val)
 	typename T::iterator i = std::find(container.begin(), container.end(), val);
 	if (i == container.end())
 	{
-		throw std::runtime_error("Value not found in container");
+		throw std::runtime_error(std::string("Value ") + std::to_string(val) + " not found in container");
 	}
 	return (i);
 }

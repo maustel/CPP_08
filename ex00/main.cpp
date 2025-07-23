@@ -6,7 +6,7 @@
 /*   By: maustel <maustel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 12:13:10 by maustel           #+#    #+#             */
-/*   Updated: 2025/04/23 16:12:32 by maustel          ###   ########.fr       */
+/*   Updated: 2025/07/23 11:11:10 by maustel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,45 +25,63 @@ to use something else, as they combine many advantages of arrays with the
 flexibility of dynamic sizing.
 */
 
-
 int main()
 {
-	std::vector<int> vec = {2, 4, 6, 8, 42};
-	std::list<int> lst = {2, 4, 6, 8, 42};
-	std::array<int, 5> arr = {2, 4, 6, 8, 42};
+	std::vector<int> vec = {2, 4, 6, 8, 42, 2, 4, 6, 8, 42};
+	std::list<int> lst = {2, 4, 6, 8, 42, 2, 4, 6, 8, 42};
+	std::array<int, 10> arr = {2, 4, 6, 8, 42, 2, 4, 6, 8, 42};
 
 	//-------------[VECTOR TEST]------------------------
 	try
 	{
 		auto iterator = easyfind(vec, 4);
-		std::cout << "Value found in vec at position: " << *iterator << " with address: " << &(*iterator) << std::endl;
+		std::size_t position = std::distance(vec.begin(), iterator);
+		std::cout << "Value " << *iterator << " found in vec at position: " << position
+					<< ", value address: " << &(*iterator) << std::endl;
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << e.what() << " vec" << '\n';
+		std::cerr << RED << e.what() << " vec" << RESET << '\n';
 	}
 
 	//-------------[LIST TEST]------------------------
 	try
 	{
 		auto iterator = easyfind(lst, 8);
-		std::cout << "Value found in lst at position: " << *iterator << " with address: " << &(*iterator) << std::endl;
+		std::size_t position = std::distance(lst.begin(), iterator);
+		std::cout << "Value " << *iterator << " found in vec at position: " << position
+					<< ", value address: " << &(*iterator) << std::endl;
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << e.what() << " lst" << '\n';
+		std::cerr << RED << e.what() << " lst" << RESET << '\n';
 	}
 
 	//-------------[ARRAY TEST]------------------------
 	try
 	{
 		auto iterator = easyfind(arr, 42);
-		std::cout << "Value found in arr at position: " << *iterator << " with address: " << &(*iterator) << std::endl;
+		std::size_t position = std::distance(arr.begin(), iterator);
+		std::cout << "Value " << *iterator << " found in vec at position: " << position
+					<< ", value address: " << &(*iterator) << std::endl;
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << e.what() << " arr" << '\n';
+		std::cerr << RED << e.what() << " arr" << RESET << '\n';
 	}
+
+	//-------------[EXCEPTION TEST]------------------------
+	try
+	{
+		auto iterator = easyfind(arr, 1000);
+		std::size_t position = std::distance(arr.begin(), iterator);
+		std::cout << "Value " << *iterator << " found in vec at position: " << position
+					<< ", value address: " << &(*iterator) << std::endl;}
+	catch(const std::exception& e)
+	{
+		std::cerr << RED << e.what() << " arr" << RESET << '\n';
+	}
+
 
 	return (0);
 }
