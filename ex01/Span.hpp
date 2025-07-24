@@ -6,7 +6,7 @@
 /*   By: maustel <maustel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 15:15:33 by maustel           #+#    #+#             */
-/*   Updated: 2025/07/23 16:19:24 by maustel          ###   ########.fr       */
+/*   Updated: 2025/07/23 17:02:45 by maustel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 # include <algorithm>
 # include <iterator>
 # include <ctime>
-# include <chrono>
 
 # include "colors.h"
 

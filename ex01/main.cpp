@@ -6,7 +6,7 @@
 /*   By: maustel <maustel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 16:14:12 by maustel           #+#    #+#             */
-/*   Updated: 2025/07/23 16:14:46 by maustel          ###   ########.fr       */
+/*   Updated: 2025/07/23 16:54:57 by maustel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,5 +78,6 @@ int main ()
 	{
 		std::cerr << RED << e.what() << '\n' << RESET;
 	}
+	
 	return (0);
 }
