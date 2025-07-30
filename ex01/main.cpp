@@ -6,7 +6,7 @@
 /*   By: maustel <maustel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 16:14:12 by maustel           #+#    #+#             */
-/*   Updated: 2025/07/23 16:54:57 by maustel          ###   ########.fr       */
+/*   Updated: 2025/07/30 15:50:52 by maustel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int main ()
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << RED << e.what() << '\n' << RESET;
+		std::cerr << RED << "error: " << e.what() << '\n' << RESET;
 	}
 
 	//-------------[BIG SPAN TEST]------------------------
@@ -51,7 +51,7 @@ int main ()
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << RED << e.what() << '\n' << RESET;
+		std::cerr << RED << "error: " << e.what() << '\n' << RESET;
 	}
 	//-------------[EXCEPTION TEST]------------------------
 	std::cout << MAG << "\n -------- [More exception tests:] -------- \n" << RESET;
@@ -64,20 +64,19 @@ int main ()
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << RED << e.what() << '\n' << RESET;
+		std::cerr << RED << "error: " << e.what() << '\n' << RESET;
 	}
 
 	try
 	{
 		Span sp = Span(10);
-		sp.addNumber(6);
 		std::cout << sp;
 		std::cout << "Longest span: " << sp.shortestSpan() << std::endl;
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << RED << e.what() << '\n' << RESET;
+		std::cerr << RED << "error: " << e.what() << '\n' << RESET;
 	}
-	
+
 	return (0);
 }

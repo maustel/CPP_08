@@ -6,7 +6,7 @@
 /*   By: maustel <maustel@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 15:24:59 by maustel           #+#    #+#             */
-/*   Updated: 2025/07/23 16:22:14 by maustel          ###   ########.fr       */
+/*   Updated: 2025/07/30 15:51:54 by maustel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,8 +105,8 @@ int Span::longestSpan()
 
 	std::vector<int> sorted_numbers = this->_vector;
 	std::sort(sorted_numbers.begin(), sorted_numbers.end());
-
 	int longest_span = sorted_numbers.back() - sorted_numbers.front();
+	
 	return (longest_span);
 }
 

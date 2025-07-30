@@ -12,6 +12,7 @@
 
 #include "MutantStack.hpp"
 #include <list>
+#include <vector>
 
 int main()
  {
@@ -78,5 +79,19 @@ int main()
 		++i;
 	}
 
+
+	//------------- TESTS WITH REVERSE ITERATOR --------------
+	std::cout << MAG << "\nTests with reverse iterators: \n" << RESET;
+
+	MutantStack<int> rmstack;
+	rmstack.push(1);
+	rmstack.push(2);
+	rmstack.push(3);
+	rmstack.push(4);
+
+	std::cout << "mstack in reversed order:" << std::endl;
+	for (MutantStack<int>::reverse_iterator j = rmstack.rbegin(); j != rmstack.rend(); ++j)
+		std::cout << *j << " ";
+	std::cout << std::endl;
 	return 0;
 }
